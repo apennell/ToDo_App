@@ -31,7 +31,7 @@
               <br><br>
               <!-- button to delete all completed items -->
               <% end %>
-              <%= button_to "Delete Completed Items", delete_complete_todos_path(@completed) %>
+              <%= button_to "Delete Completed Items", @completed, method: :delete %>
             </ul>
         </div> <!-- end well class -->
 
@@ -51,6 +51,8 @@
       </div> <!-- end span4 -->
     </div> <!-- end row -->
   </div> <!-- end container -->
+
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 
 </body>
 </html>

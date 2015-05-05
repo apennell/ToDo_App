@@ -1,7 +1,10 @@
 class TodosController < ApplicationController
   def index
     @todos = Todo.all
-    render :index
+    respond_to do |format|
+      format.html
+      format.json { render json: @todos }
+    end
   end
 
   def create
